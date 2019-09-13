@@ -1,5 +1,6 @@
-# This program makes you guess the sum of to dices.
+# This program makes you guess the sum of two dices.
 # You have 3 tries to guess the right answer.
+
 from random import randint as a
 
 
