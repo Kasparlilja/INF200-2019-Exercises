@@ -17,4 +17,3 @@ def deck_comp():
 if __name__ == '__main__':
     if deck_loop() != deck_comp():
         print('ERROR!')
-

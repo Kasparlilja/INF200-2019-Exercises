@@ -1,15 +1,16 @@
 import collections
 
+
 def letter_freq(txt):
-    streng = txt.lower()
-    streng = ''.join(sorted(streng))
-    tekst = collections.OrderedDict()
-    for symbol in streng:
-        if symbol in tekst:
-            tekst[symbol] += 1
+    string = txt.lower()
+    alphabetic_string = ''.join(sorted(string))
+    new_dict = collections.OrderedDict()
+    for symbol in alphabetic_string:
+        if symbol in new_dict:
+            new_dict[symbol] += 1
         else:
-            tekst[symbol] = 1
-    return tekst
+            new_dict[symbol] = 1
+    return new_dict
 
 
 if __name__ == '__main__':

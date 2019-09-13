@@ -1,5 +1,3 @@
-n = 10
-
 def squares_by_comp(n):
     return [k ** 2 for k in range(n) if k % 3 == 1]
 
@@ -13,5 +11,5 @@ def comp_to_loop(n):
 
 
 if __name__ == '__main__':
-    if squares_by_comp(n) != comp_to_loop(n):
+    if squares_by_comp(5) != comp_to_loop(5):
         print('ERROR!')
