@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+
 # This program makes you guess the sum of two dices.
 # You have 3 tries to guess the right answer.
 
-from random import randint as a
+from random import randint
 
 
 def players_guess():
@@ -13,7 +14,7 @@ def players_guess():
 
 
 def dices_sum():
-    return a(1, 6) + a(1, 6)
+    return randint(1, 6) + randint(1, 6)
 
 
 def if_correct_answer(f, g):
