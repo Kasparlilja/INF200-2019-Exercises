@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This program makes you guess the sum of two dices.
 # You have 3 tries to guess the right answer.
 
