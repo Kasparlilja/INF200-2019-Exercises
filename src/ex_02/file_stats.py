@@ -2,17 +2,17 @@ def char_counts(textfilename):
     file_name = open(textfilename)
     str_text = file_name.read()
     file_name.close()
-    count = {}
+    count_ = {}
 
     for key_value in range(256):
-        count{key_value} = 0
+        count_[key_value] = 0
 
     for index, chr in enumerate(str_text):
-        if ord(chr) in count.keys():
-            count[ord(chr)] += 1]
+        if ord(chr) in count_.keys():
+            count_[ord(chr)] += 1
         else:
-            count[ord(chr)] = 1]
-    return count
+            count_[ord(chr)] = 1
+    return count_
 
 
 if __name__ == '__main__':
