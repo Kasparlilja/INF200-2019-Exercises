@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+__author__ = 'kaspar lilja'
+__email__ = 'kalilja@nmbu.no'
+
 from collections import Counter
 from math import log2
 

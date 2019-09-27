@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+__author__ = 'kaspar lilja'
+__email__ = 'kalilja@nmbu.no'
+
 
 def char_counts(textfilename):
     file_name = open(textfilename)
