@@ -4,10 +4,6 @@ __author__ = 'Kaspar Akilles Lilja'
 __email__ = 'kalilja@nmbu.no'
 
 
-def example_list():
-    return [3, 5, 1, 9, 2]
-
-
 def bubble_sort(data):
     datalist = list(data)
     for i in range(0, len(datalist) - 1):
