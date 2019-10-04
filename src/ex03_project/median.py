@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+__author__ = 'Kaspar Akilles Lilja'
+__email__ = 'kalilja@nmbu.no'
+
 
 def median(data):
     """
@@ -7,12 +12,9 @@ def median(data):
     :return: Median of data
     """
 
-    sorted_data = sorted(data)
-    num_elements = len(sorted_data)
-    try:
-        if num_elements % 2 == 1:
-            return sorted_data[num_elements // 2]
-        else:
-            return (sorted_data[num_elements // 2 - 1] + sorted_data[num_elements // 2]) / 2
-    except:
+    sdata = sorted(data)
+    n = len(sdata)
+    if n < 1:
         raise ValueError
+    return (sdata[n // 2] if n % 2 == 1
+            else 0.5 * (sdata[n // 2 - 1] + sdata[n // 2]))

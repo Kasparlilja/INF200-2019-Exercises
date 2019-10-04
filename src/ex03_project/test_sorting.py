@@ -1,5 +1,7 @@
-import pytest
+# -*- coding: utf-8 -*-
 
+__author__ = 'Kaspar Akilles Lilja'
+__email__ = 'kalilja@nmbu.no'
 
 
 def example_list():
@@ -14,6 +16,7 @@ def bubble_sort(data):
                 datalist[j], datalist[j + 1] = datalist[j + 1], datalist[j]
     return datalist
 
+
 def test_empty():
     """Test that the sorting function works for empty list"""
     empty_list = []
@@ -24,6 +27,7 @@ def test_single():
     """Test that the sorting function works for single-element list"""
     single_element_list = [2]
     assert bubble_sort(single_element_list) == single_element_list
+
 
 def test_sorted_is_not_original():
     """
@@ -87,8 +91,4 @@ def test_comparing_two_lists():
     assert sorted_list1 < sorted_list2
 
 
-def test_sorting_list_of_string():
-    string_list = [1, 4, "hei", 3, 2]
-    sorted_list = bubble_sort(string_list)
-    assert sorted_list == [1, 2, 3, 4]
 

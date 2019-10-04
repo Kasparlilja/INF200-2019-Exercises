@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+__author__ = 'Kaspar Akilles Lilja'
+__email__ = 'kalilja@nmbu.no'
+
 import pytest
 from .median import median
 
@@ -34,6 +39,10 @@ def test_median_rasis_value_error_on_empty_list():
 def test_func_leaves_orginal_data_unchanged():
     data = [1, 3, 5]
     assert median(data) == 3 and data == [1, 3, 5]
+
+
+def test_tuples():
+    assert median((1, 5, 6)) == 5
 
 
 
