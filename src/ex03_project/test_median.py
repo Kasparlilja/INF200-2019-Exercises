@@ -26,14 +26,14 @@ def test_median_unordered_elements_list():
     assert median([3, 5, 1, 7, 9]) == 5
 
 
-
-
-
-
-"""
 def test_median_rasis_value_error_on_empty_list():
     with pytest.raises(ValueError):
         median([])
 
-"""
+
+def test_func_leaves_orginal_data_unchanged():
+    data = [1, 3, 5]
+    assert median(data) == 3 and data == [1, 3, 5]
+
+
 

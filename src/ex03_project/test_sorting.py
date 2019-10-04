@@ -17,15 +17,13 @@ def bubble_sort(data):
 def test_empty():
     """Test that the sorting function works for empty list"""
     empty_list = []
-    sorted_list = bubble_sort(empty_list)
-    assert len(sorted_list) == 0
+    assert bubble_sort(empty_list) == empty_list
 
 
 def test_single():
     """Test that the sorting function works for single-element list"""
     single_element_list = [2]
-    sorted_list = bubble_sort(single_element_list)
-    assert len(sorted_list) == 1
+    assert bubble_sort(single_element_list) == single_element_list
 
 def test_sorted_is_not_original():
     """
@@ -42,7 +40,7 @@ def test_original_unchanged():
     """
     data = [3, 2, 1]
     sorted_data = bubble_sort(data)
-    assert data == [3, 2, 1]
+    assert data == [3, 2, 1] and sorted_data != [3, 2, 1]
 
 
 def test_sort_sorted():
@@ -73,11 +71,24 @@ def test_sort_float_list():
     sorted_list = bubble_sort(float_list)
     assert sorted_list == [3.2, 4.33, 6.6798]
 
-def test_sort_example_list():
-    sorted_list = bubble_sort(example_list())
-    for small, large in zip(sorted_list[:-1], sorted_list[1:]):
-        assert small < large
 
-    return True
+def test_comparing_two_lists():
+    """
+    Test sorting for various test cases.
 
+    This test case should test sorting of a range of data sets and
+    ensure that they are sorted correctly. These could be lists of
+    numbers of different length or lists of strings.
+    """
+    list1 = [3, 2, 1]
+    list2 = [4, 5, 2, 7]
+    sorted_list1 = bubble_sort(list1)
+    sorted_list2 = bubble_sort(list2)
+    assert sorted_list1 < sorted_list2
+
+
+def test_sorting_list_of_string():
+    string_list = [1, 4, "hei", 3, 2]
+    sorted_list = bubble_sort(string_list)
+    assert sorted_list == [1, 2, 3, 4]
 
