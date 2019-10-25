@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-__author__ = ''
-__email__ = '@nmbu.no'
+__author__ = 'Kaspar Lilja'
+__email__ = 'kalilja@nmbu.no'
 
 import random
+
 
 class Walker:
 
@@ -12,11 +13,9 @@ class Walker:
         self.homepos = homepos
         self.steps = 0
 
-
     def move(self):
         self.initalpos += random.choice([-1, 1])
         self.steps += 1
-
 
     def is_at_home(self):
         if self.homepos == self.initalpos:
@@ -24,10 +23,8 @@ class Walker:
         else:
             return False
 
-
     def get_position(self):
         return self.initalpos
-
 
     def get_steps(self):
         return self.steps
@@ -38,7 +35,7 @@ def walking(distance):
     startpos = 0
     the_walker = Walker(startpos, distance)
 
-    while the_walker.is_at_home() == False:
+    while not the_walker.is_at_home():
         the_walker.move()
 
     return the_walker.get_steps()
@@ -52,5 +49,3 @@ if __name__ == "__main__":
         for i in range(5):
             path.append(walking(distance))
         print('Distance: {0} -> Path lengths: {1}'.format(distance, path))
-
-

@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-__author__ = ''
-__email__ = '@nmbu.no'
+__author__ = 'Kaspar Lilja'
+__email__ = 'kalilja@nmbu.no'
+
 
 class LCGRand:
+
     def __init__(self, seed):
         self.seed = seed
-
 
     def rand(self):
         a = 16807
@@ -16,14 +17,12 @@ class LCGRand:
 
 
 class ListRand:
-    def __init__(self, randomlist):
 
+    def __init__(self, randomlist):
         self.randomlist = randomlist
         self.position = 0
 
-
     def rand(self):
-
         if self.position >= len(self.randomlist):
             raise RuntimeError
         else:
